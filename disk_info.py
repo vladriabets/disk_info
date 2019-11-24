@@ -44,7 +44,10 @@ def give_device_info(device_name):
 
     return result
 
+def main():
+    name = read_device_name('path_to_device.txt')
+    device_info = give_device_info(name)
+    print(device_info)
 
-name = read_device_name('path_to_device.txt')
-device_info = give_device_info(name)
-print(device_info)
+if __name__ == '__main__':
+    main()
