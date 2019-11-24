@@ -1,5 +1,4 @@
 import subprocess
-import os
 import json
 
 
@@ -7,11 +6,11 @@ def read_device_name(path_to_file):
 
     """ Reads device name from a file """
 
-    if os.path.exists(path_to_file):
+    try:
         with open(path_to_file, 'r', 1) as f:
             device_name = f.read()
             return '/dev/' + device_name
-    else:
+    except FileNotFoundError:
         print('path_to_device.txt does not exists')
         exit(1)
 
