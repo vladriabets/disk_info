@@ -4,7 +4,7 @@ import json
 
 def read_device_name(path_to_file):
 
-    """ Reads device name from a file """
+    """ Read device name from a file """
 
     try:
         with open(path_to_file, 'r', 1) as f:
@@ -17,7 +17,7 @@ def read_device_name(path_to_file):
 
 def give_device_info(device_name):
 
-    """ Takes device name and returns information about it """
+    """ Take device name and return information about the device """
 
     try:
         lsblk = json.loads(subprocess.check_output(['lsblk', '-b', '--json', '-o',
