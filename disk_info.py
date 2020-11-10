@@ -11,7 +11,7 @@ def read_device_name(path_to_file):
             device_name = f.read()
             return '/dev/' + device_name
     except FileNotFoundError:
-        print('path_to_device.txt does not exists')
+        print('path_to_device.txt does not exist')
         exit(1)
 
 
